@@ -4,10 +4,10 @@ layout: page
 comments: yes
 ---
   
-卢克进, 08年毕业于南京理工大学计算机学院.      
-熟练使用常见的计算机语言.      
-目前从事Mac,iOS开发相关工作.      
+	2012毕业的学渣一枚,至今没有做出任何的成绩,
+	仍旧在生活温饱线上挣扎着.<br>
+	做过j2me,as3,js的游戏,会的不多.
 
-个人邮箱:kejinlu@gmail.com      
-新浪微博: [http://weibo.com/kejinlu](http://weibo.com/kejinlu)      
-github : [https://github.com/kejinlu](https://github.com/kejinlu)      
+联系地址:
+<lolikiller@163.com>
+    
