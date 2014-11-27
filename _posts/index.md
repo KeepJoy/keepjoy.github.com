@@ -1,3 +1,12 @@
+---
+layout: default
+title: HelloGitHub
+categories:
+- test
+tags:
+- git
+---
+
 Hello GitHub
 ============
 

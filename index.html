@@ -1,21 +1,53 @@
-<h1>Hello GitHub</h1>
+---
+title: KeepJoy Page
+layout: page
+---
 
-<hr />
+<ul class="listing">
+{% for post in paginator.posts %}
+  {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+  {% if year != y %}
+    {% assign year = y %}
+    <li class="listing-seperator">{{ y }}</li>
+  {% endif %}
+  <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>
 
-<p>This is my 
-<a href="http://keepjoy.github.com"><strong>GitHub Page</strong></a> .
-The URL is <a href="http://keepjoy.github.com">http://keepjoy.github.com</a>.</p>
+<div id="post-pagination" class="paginator">
 
-<p>The page is just a test that create a <strong>Repo</strong> named <em>yourname.github.com</em> 
-to build a pages like blog.</p>
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+    <a href="/"><前页</a>
+    {% else %}
+    <a href="/page{{paginator.previous_page}}"><前页</a>
+    {% endif %}
+  {% else %}
+    <span class="previous disabled"><前页</span>
+  {% endif %}
 
-<p>I write this pages 
-use <strong>MarkDown</strong>, <br> it is a MarkUp Language like HTML,
-<br>and simple to use and understand.</p>
+      {% if paginator.page == 1 %}
+      <span class="current-page">1</span>
+      {% else %}
+      <a href="/">1</a>
+      {% endif %}
 
-<hr />
+    {% for count in (2..paginator.total_pages) %}
+      {% if count == paginator.page %}
+      <span class="current-page">{{count}}</span>
+      {% else %}
+      <a href="/page{{count}}">{{count}}</a>
+      {% endif %}
+    {% endfor %}
 
-<pre><code>My Email: 
-</code></pre>
+  {% if paginator.next_page %}
+    <a class="next" href="/page{{paginator.next_page}}">后页></a>
+  {% else %}
+    <span class="next disabled" >后页></span>
+  {% endif %}
+  (共{{ paginator.total_posts }}篇)
+</div>
 
-<p><a href="&#109;&#x61;&#x69;&#x6C;&#116;&#111;:&#108;&#111;&#x6C;i&#x6B;&#x69;&#x6C;&#108;&#101;&#x72;&#64;1&#x36;&#51;&#46;c&#111;&#x6D;">&#108;&#111;&#x6C;i&#x6B;&#x69;&#x6C;&#108;&#101;&#x72;&#64;1&#x36;&#51;&#46;c&#111;&#x6D;</a></p>
