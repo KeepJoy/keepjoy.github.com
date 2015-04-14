@@ -1,0 +1,10 @@
+---
+contentdir: "content"
+layoutdir: "layouts"
+publishdir: "public"
+indexes:
+  category: "categories"
+baseurl: "https://github.com/KeepJoy/keepjoy.github.com/"
+title: "Hugo Blog Template for GitHub Pages"
+canonifyurls:true
+...

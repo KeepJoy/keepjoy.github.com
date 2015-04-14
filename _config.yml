@@ -1,6 +1,0 @@
-markdown: rdiscount
-permalink: /:year/:month/:title/
-url: http://keepjoy.github.io
-author: Keep Joy
-pygments: true
-paginate: 24
