@@ -1,0 +1,27 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "my blog rebuild use nodejs+webpack+react+es6 in github",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KeepJoy/keepjoy.github.com.git"
+  },
+  "keywords": [
+    "blog",
+    "github"
+  ],
+  "author": "nextpro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KeepJoy/keepjoy.github.com/issues"
+  },
+  "homepage": "https://github.com/KeepJoy/keepjoy.github.com#readme",
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
+}

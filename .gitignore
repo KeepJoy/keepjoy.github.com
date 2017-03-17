@@ -1,0 +1,6 @@
+#blog project git ignore file
+
+#ignore nodejs modules
+
+node_modules
+
