@@ -9473,7 +9473,7 @@ module.exports = function () {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.user_name = undefined;
+exports.desc = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -9495,62 +9495,47 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //in file component.jsx
 
-var Hello = function (_React$Component) {
-    _inherits(Hello, _React$Component);
+var Timer = function (_React$Component) {
+    _inherits(Timer, _React$Component);
 
-    function Hello() {
-        _classCallCheck(this, Hello);
+    function Timer() {
+        _classCallCheck(this, Timer);
 
-        return _possibleConstructorReturn(this, (Hello.__proto__ || Object.getPrototypeOf(Hello)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (Timer.__proto__ || Object.getPrototypeOf(Timer)).apply(this, arguments));
     }
 
-    _createClass(Hello, [{
+    _createClass(Timer, [{
         key: 'render',
         value: function render() {
+            var d = new Date();
             return _react2.default.createElement(
                 'div',
                 null,
-                'timer:',
-                new Date().toLocaleTimeString()
+                'time now:',
+                d.toLocaleTimeString(),
+                ' ',
+                d.toLocaleString()
             );
         }
     }]);
 
-    return Hello;
+    return Timer;
 }(_react2.default.Component);
 
-exports.default = Hello;
-
-
-function formatName(user) {
-    return user.firstName + ' ' + user.lastName;
-}
-
-var user = {
-    firstName: 'Harry',
-    lastName: 'Poter'
-};
-
+exports.default = Timer;
 function Welcome(prop) {
     return _react2.default.createElement(
         'div',
         null,
-        user_name,
-        ' ',
-        _react2.default.createElement(
-            'div',
-            null,
-            'Welcome props.p is ',
-            prop.p
-        )
+        'Welcome  ',
+        prop.name
     );
 }
 
-var user_name = exports.user_name = _react2.default.createElement(
-    'div',
+var desc = exports.desc = _react2.default.createElement(
+    'p',
     null,
-    'Hey, ',
-    formatName(user)
+    '\u6B63\u5728\u65BD\u5DE5\u4E2D\u3002\u3002\u3002'
 );
 
 /***/ }),
@@ -21822,9 +21807,8 @@ function updateUI() {
 var user_list = _react2.default.createElement(
     'div',
     null,
-    _component.user_name,
-    _react2.default.createElement(_component.Welcome, { p: 'aaa' }),
-    _react2.default.createElement(_component.Welcome, { p: 'bbb' })
+    _react2.default.createElement(_component.Welcome, { name: 'Kepp\'s blog' }),
+    _component.desc
 );
 
 _reactDom2.default.render(user_list, document.getElementById('title'));

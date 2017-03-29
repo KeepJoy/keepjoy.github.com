@@ -10,11 +10,11 @@ document.body.appendChild(component());
 //react + webpack
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hello, {user_name, Welcome} from './component.jsx';
+import Timer, {desc, Welcome} from './component.jsx';
 
 function updateUI() {
     ReactDOM.render(
-        <Hello />, 
+        <Timer />, 
         document.getElementById('content')
     );
 }
@@ -22,9 +22,8 @@ function updateUI() {
 
 var user_list = (
     <div>
-        {user_name}
-        <Welcome p="aaa" />
-        <Welcome p="bbb" />
+        <Welcome name="Kepp's blog" />
+        {desc}
     </div>
 );
 
