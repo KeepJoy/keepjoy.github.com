@@ -1,5 +1,5 @@
 [TOC]
-Kepp Joy blog
+KeepJoy(Kepp) blog
 ============
 
 This is my blogs. __Welcome!__
@@ -7,10 +7,8 @@ I removed all of the old content,and wanna use
 markdown to write this pages directly not jekyll.
   
 
-Contents  
->[Hello World](http://keepjoy.github.com)  
->[to be continued]()
-
+__UPDATE__
+尝试用 *React*  构建博客静态BLOG(29/03/2017)
   
   
-&copy; Kepp
+&copy; KeepJoy
